@@ -44,9 +44,9 @@ reco.onresult = (event) => {
 };
 
 reco.onend = () => {
-    if (isListening) {
-      reco.start();  // Restart listening automatically after recognition ends
-    }
+  if (isListening) {
+    reco.start();  // Restart listening automatically after recognition ends
+  }
 };
 
 // Start listening when the button is clicked
@@ -58,8 +58,71 @@ button.addEventListener("click", () => {
 // Handling Repzz commands
 function takeCommand(transcript) {
   if (transcript.includes("hey") || transcript.includes("hello") || transcript.includes("hi") || transcript.includes("hey ") || transcript.includes(" hi nef")) {
-    speak("Hello Sir , How may i help you today");
-  }
+    speak("Hello Sir , How may i help you today");}
+
+
+
+
+
+
+
+    /// here are my list of jokes ///-- can modify it later//
+    const jokes = [
+      "Why don't skeletons fight each other? They don't have the guts.",
+      "Why was the math book sad? Because it had too many problems.",
+      "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+      "Why don’t eggs tell jokes? Because they might crack up.",
+      "What do you call fake spaghetti? An impasta.",
+      "I used to play piano by ear, but now I use my hands.",
+      "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats.",
+      "Why don’t some couples go to the gym? Because some relationships don’t work out.",
+      "I’m reading a book about anti-gravity. It’s impossible to put down!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field.",
+      "Why don’t oysters donate to charity? Because they are shellfish.",
+      "What’s orange and sounds like a parrot? A carrot!",
+      "Why did the bicycle fall over? It was two-tired.",
+      "What did one wall say to the other wall? I'll meet you at the corner.",
+      "Why do cows have hooves instead of feet? Because they lactose.",
+      "What did the ocean say to the beach? Nothing, it just waved.",
+      "Why did the golfer bring an extra pair of pants? In case he got a hole in one.",
+      "Why don't some couples go to the gym? Because some relationships don't work out.",
+      "How do you organize a space party? You planet!",
+      "What do you get when you cross a snowman and a vampire? Frostbite.",
+      "Why did the computer go to the doctor? Because it had a virus.",
+      "Why don’t skeletons ever use cell phones? They don’t have the guts.",
+      "What’s the best way to watch a fly fishing tournament? Live stream.",
+      "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+      "I asked the librarian if the library had any books on paranoia. She whispered, 'They're right behind you.'",
+      "I would tell you a joke about an elevator, but it’s an uplifting experience.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "I don’t trust stairs because they’re always up to something.",
+      "Why was the belt arrested? For holding up a pair of pants.",
+      "What do you call a pile of cats? A meow-tain.",
+      "What do you get when you cross a snowman with a dog? Frostbite.",
+      "Why did the chicken join a band? Because it had the drumsticks!",
+      "Why don’t skeletons fight each other? They don’t have the guts.",
+      "What’s the hardest part about writing a joke? It’s always a bit of a pun-ishment.",
+      "Why did the scarecrow get promoted? Because he was outstanding in his field.",
+      "What’s a skeleton’s least favorite room in the house? The living room.",
+      "What did one hat say to the other hat? Stay here, I’m going on ahead.",
+      "Why did the banana go to the doctor? Because it wasn’t peeling well.",
+      "What do you call a cow with no legs? Ground beef.",
+      "What’s a skeleton’s least favorite room in the house? The living room.",
+      "Why do bicycles fall over? Because they’re two-tired."
+    ];
+    
+    // Handle joke command
+    if (transcript.includes("joke") || transcript.includes("tell me a joke")) {
+      // Pick a random joke from the array
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+      speak(randomJoke);
+    }
+
+
+
+
+    //jokes ends above //..................```````````````````````
+    
   else if (transcript.includes("google")) {
     window.open("https://www.google.com/");
     speak("Google has been opened");
@@ -162,12 +225,102 @@ function takeCommand(transcript) {
   else if (transcript.includes("amazon")) {
     window.open("https://www.amazon.com/");
     speak("Shopping time, I see... Sir!");
+
+
+    // creation part still in progress //
   }
   else if (transcript.includes("created") || transcript.includes("who created you")) {
+    window.open("https://www.metalio.com/")
+    console.log("Replying to creator question");
     speak("I was created by Pranjal Malhotra, a student at VIT Chennai.");
+  }/// fretty's creation question ..........
+  else if (transcript.includes("facebook")) {
+    window.open("https://www.facebook.com/");
+    speak("Opening facebook for you sir...");
   }
+
+  else if (transcript.includes("age")|| transcript.includes("your age")){
+    speak("i wwas created by Pranjal Malhotra on 26th January 2025....... you can calculate it , you're a really good mathematician Sir.........")
+  }
+  else if (transcript.includes("Reddit")) {
+    window.open("https://www.reddit.com/");
+    speak("Opening reddit comunity for you sir ");
+  }
+
+  else if (transcript.includes("netflix")) {
+    window.open("https://www.netflix.com/");
+    speak("Netflix and chilll...");
+  }
+
+  else if (transcript.includes("whatsapp")) {
+    window.open("https://www.whatsapp.com/");
+    speak("Turning on whatsapp Sir......");
+  }
+
+  else if (transcript.includes("Prime")||transcript.includes("video")) {
+    window.open("https://www.primevideo.com/");
+    speak("Lets have some fun on prime ....");
+  }
+
+  else if (transcript.includes("byjus")) {
+    window.open("https://byjus.com/");
+    speak("Opening byjus for you sir ");
+  }
+
+  else if (transcript.includes("redbus")||transcript.includes("bus")) {
+    window.open("https://www.redbus.in/");
+    speak("Lets look for a bus sir.... ");
+  }
+
+  else if (transcript.includes("language")||transcript.includes("improve language")||transcript.includes("duolingo")) {
+    window.open("https://www.duolingo.com/");
+    speak("Path to learn a new language sir.... ");
+
+
+
+    
+  }
+
+    // some more settingsss//
+
+    else if (transcript.includes("open new tab")||transcript.includes("new tab")) {
+      window.open();
+      speak("Opening a new tab, Sir.");
+    }
+    
+    else if (transcript.includes("refresh page")|| transcript.includes("refresh")) {
+      window.location.reload();
+      speak("Refreshing the page.");
+    }
+    
+    else if (transcript.includes("quit ")||transcript.includes("close")) {
+      window.close();
+      speak("Goodbye Sir.");
+    }
+    
+
   else {
     speak("Sorry, can you please repeat, Sir?");
   }
 }
+
+let isRecording = false;
+
+// Adding an event listener for the backtick key
+window.addEventListener("keydown", (event) => {
+  if (event.key === "`" || event.key === "~") { // Backtick key will help is holding mic on/off commands 
+    content.textContent = "Listening....";
+    reco.start();
+  }
+});
+  /// adding event listerner for the keyup event to stop mic when key is released //
+
+  window.addEventListener("keyup", (event) => {
+    if (event.key === "`" || event.key === "~") {
+      content.textContent = "Mic off.";
+      reco.stop();
+      isRecording = false; // Set to false when recording stops
+    }
+  });
+
 
