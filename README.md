@@ -18,3 +18,6 @@ This project integrates **Arduino UNO** with **JavaCPP** and **Processing 4**, c
 - ✅ Sonar sensor (Ultrasonic HC-SR04)
 
 YOU CAN REFER TO THE WORD FILE FOR MORE DETAIL , video of its working is already uploaded........
+download the doc file to learn about more details from my repo........
+
+Also i have uploaded a video of its working .......  so that you can see the real output on processing4 software (Dont forget to download Processing4 software for output)
