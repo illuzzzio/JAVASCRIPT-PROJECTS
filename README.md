@@ -21,3 +21,8 @@ YOU CAN REFER TO THE WORD FILE FOR MORE DETAIL , video of its working is already
 download the doc file to learn about more details from my repo........
 
 Also i have uploaded a video of its working .......  so that you can see the real output on processing4 software (Dont forget to download Processing4 software for output)
+
+extra tip:
+if you are using this code , please identify the COM3 port on your device , because this code is specifically made for COM3 port , or otherwise you have to do changes in the cpp and java file and you have to change the name of the port............
+
+Thank you
